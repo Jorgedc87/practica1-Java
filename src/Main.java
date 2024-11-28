@@ -36,13 +36,10 @@ public class Main {
         temperatures [9][0]= -10;
         temperatures [9][1]= 35;
 
-        int temMax, temMin;
-        String ciuMax, ciuMin;
+        String[] results = obtenerMinMax(cities, temperatures);
 
-        String[] resultados = obtenerMinMax(cities, temperatures);
-
-        System.out.println("La menor temperatura tuvo " + resultados[0]);
-        System.out.println("La mayor temperatura tuvo " + resultados[1]);
+        System.out.println("La menor temperatura la tuvo " + results[0]);
+        System.out.println("La mayor temperatura la tuvo " + results[1]);
 
     }
 
@@ -50,20 +47,20 @@ public class Main {
 
         int minTemp = temperatures[0][0];
         int maxTemp = temperatures[0][1];
-        String ciuMin = cities[0] + ", con " + minTemp + "°C";
-        String ciuMax = cities[0] + ", con " + maxTemp + "°C";
+        String cityMin = cities[0] + ", con " + minTemp + "°C";
+        String cityMax = cities[0] + ", con " + maxTemp + "°C";
 
         for(int i = 0; i < temperatures.length; i++){
             if(temperatures[i][0] < minTemp){
                 minTemp = temperatures[i][0];
-                ciuMin = cities[i] + ", con " + minTemp + "°C";
+                cityMin = cities[i] + ", con " + minTemp + "°C";
             }
             if(temperatures[i][1] > maxTemp){
                 maxTemp = temperatures[i][1];
-                ciuMax = cities[i] + ", con " + maxTemp + "°C";
+                cityMax = cities[i] + ", con " + maxTemp + "°C";
             }
         }
 
-        return new String[]{ciuMin, ciuMax};
+        return new String[]{cityMin, cityMax};
     }
 }
