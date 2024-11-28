@@ -58,7 +58,7 @@ public class Main {
                 minTemp = temperatures[i][0];
                 ciuMin = cities[i] + ", con " + minTemp + "°C";
             }
-            if(temperatures[i][1] < maxTemp){
+            if(temperatures[i][1] > maxTemp){
                 maxTemp = temperatures[i][1];
                 ciuMax = cities[i] + ", con " + maxTemp + "°C";
             }
