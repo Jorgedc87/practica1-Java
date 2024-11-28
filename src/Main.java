@@ -36,14 +36,14 @@ public class Main {
         temperatures [9][0]= -10;
         temperatures [9][1]= 35;
 
-        String[] results = obtenerMinMax(cities, temperatures);
+        String[] results = getMinMax(cities, temperatures);
 
         System.out.println("La menor temperatura la tuvo " + results[0]);
         System.out.println("La mayor temperatura la tuvo " + results[1]);
 
     }
 
-    public static String[] obtenerMinMax(String [] cities, int[][] temperatures) {
+    public static String[] getMinMax(String [] cities, int[][] temperatures) {
 
         int minTemp = temperatures[0][0];
         int maxTemp = temperatures[0][1];
